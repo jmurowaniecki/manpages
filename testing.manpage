@@ -1,0 +1,47 @@
+.\" Manpage for Awesome Manpages.
+.\" Contact john@compilou.com.br to correct errors or typos.
+.TH man 8 "2 Set 2021" "1.0" "Awesome Manpages man page"
+.SH NAME
+Awesome Manpages - provide man pages syntax subset for VSCode.
+
+.SH SYNOPSIS
+awesome_command
+.B  <option|path or file>
+.B  {-R|--resize W,H}
+.B  {-C|--crop W,H}
+.IR <more|options…>
+
+.SH DESCRIPTION
+.B Awesome Manpages
+was built in order to facilitate the development journey of useful and properly standardized documentation using the well known - and widely available - man page tool.
+
+.SH OPTIONS
+
+.TP
+.BR option
+Option example
+
+.TP
+.BR -R ", " --resize =W,H
+Resize image to the given resolution.
+Default is 150,200.
+
+.TP
+.BR -C ", " --crop =W,H
+Crop image to the given resolution.
+Default is 150,200.
+
+.TP
+.BR <more…>
+Processed result image.
+Default is `processed.png`.
+
+
+.SH SEE ALSO
+https://github.com/jmurowaniecki/AwesomeManpages
+
+.SH BUGS
+No known bugs.
+
+.SH AUTHOR
+John Murowaniecki <john@compilou.com.br>

@@ -1,0 +1,93 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Manpage",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "markup.heading",
+					"match": "\\.[A-Z]*"
+				},
+				{
+					"name": "markup.bold",
+					"match": "\\.[A-Z]* (.*)"
+				},
+				{
+					"name": "markup.underline",
+					"match": "\\.(B|IR).*"
+				},
+				{
+					"name": "markup.underline",
+					"match": "\\b\\.BR (.*)\\b"
+				},
+				{
+					"name": "comment.line",
+					"match": "\\.\\\\\" (.*)"
+				},
+				{
+					"name": "markup.bold",
+					"match": "<(.*)>",
+					"patterns": [
+						{
+							"name": "variable.parameter",
+							"match": "([\\-]+[a-zA-Z_]*)"
+						}
+					]
+				},
+				{
+					"name": "variable.parameter",
+					"match": "([\\-]+[a-zA-Z_]*)"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "constant.character.escape",
+					"match": "\\\\."
+				},
+				{
+					"name": "string.quoted.single",
+					"begin": "'",
+					"end": "'"
+				},
+				{
+					"name": "string.quoted.double",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": []
+				},
+				{
+					"begin": "\\$?\"",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin"
+						}
+					},
+					"end": "\"",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end"
+						}
+					},
+					"name": "string.quoted.double.custom",
+					"patterns": [
+						{
+							"match": "\\\\[\\$`\"\\\\\\n]",
+							"name": "constant.character.escape"
+						}
+					]
+				}
+			]
+		}
+	},
+	"scopeName": "source.man"
+}

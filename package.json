@@ -1,0 +1,25 @@
+{
+    "name": "manpage",
+    "displayName": "manpage",
+    "description": "Syntax highlight for system reference manuals",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.48.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "manpage",
+            "aliases": ["manpage", "manpages", "man"],
+            "extensions": [".man",".manpage"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "manpage",
+            "scopeName": "source.man",
+            "path": "./syntaxes/manpage.tmLanguage.json"
+        }]
+    }
+}
