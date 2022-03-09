@@ -3,7 +3,7 @@
     "displayName": "manpage",
     "description": "Syntax highlight for system reference manuals",
     "homepage": "https://github.com/jmurowaniecki/manpages",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "compilouit",
     "author": {
         "name": "John Murowaniecki",
@@ -38,16 +38,27 @@
         "publish": "npm run publish:extension && npm run publish:repository"
     },
     "contributes": {
-        "languages": [{
-            "id": "manpage",
-            "aliases": ["manpage", "manpages", "man"],
-            "extensions": [".man",".manpage"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "manpage",
-            "scopeName": "source.man",
-            "path": "./syntaxes/manpage.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "manpage",
+                "aliases": [
+                    "manpage",
+                    "manpages",
+                    "man"
+                ],
+                "extensions": [
+                    ".man",
+                    ".manpage"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "manpage",
+                "scopeName": "source.man",
+                "path": "./syntaxes/manpage.tmLanguage.json"
+            }
+        ]
     }
 }
