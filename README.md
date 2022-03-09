@@ -1,6 +1,8 @@
 # VSCode Manpages Syntax Extension
 
-![screenshot using Monokai dimmed](screenshot.png)
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+![screenshot using Monokai dimmed](assets/screenshot.png)
 
 **Yeah!** This is a super simple Man Pages syntax extension. Fell free to use and contribute!
 
@@ -19,3 +21,8 @@ git clone git@github.com:jmurowaniecki/manpages.git ~/.vscode/extensions/
 > - https://www.golinuxcloud.com/create-man-page-template-linux-with-examples/
 > - https://ubuntu-mate.community/t/how-to-create-your-own-man-pages/7931
 >
+
+---
+
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].

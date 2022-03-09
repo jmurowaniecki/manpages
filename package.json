@@ -2,13 +2,41 @@
     "name": "manpage",
     "displayName": "manpage",
     "description": "Syntax highlight for system reference manuals",
+    "homepage": "https://github.com/jmurowaniecki/manpages",
     "version": "0.0.1",
+    "publisher": "compilouit",
+    "author": {
+        "name": "John Murowaniecki",
+        "email": "jmurowaniecki@gmail.com",
+        "url": "https://compilou.com.br"
+    },
+    "maintainers": [
+        "John Murowaniecki <jmurowaniecki@gmail.com>"
+    ],
+    "contributors": [],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jmurowaniecki/manpages.git"
+    },
+    "bugs": {
+        "url": "https://github.com/jmurowaniecki/manpages/issues"
+    },
+    "icon": "assets/icon.png",
+    "galleryBanner": {
+        "color": "#261d45",
+        "theme": "dark"
+    },
     "engines": {
         "vscode": "^1.48.0"
     },
     "categories": [
         "Programming Languages"
     ],
+    "scripts": {
+        "publish:extension": "vsce publish patch",
+        "publish:repository": "git push origin main",
+        "publish": "npm run publish:extension && npm run publish:repository"
+    },
     "contributes": {
         "languages": [{
             "id": "manpage",
