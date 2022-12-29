@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 128 128"
+	width="128"
+	height="128"
+	font-family="Monda"
+	font-size="17"
+	>
+
+	<rect fill="black" width="128" height="128"></rect>
+
+	<text fill="orange">
+		<tspan x="8" y="24">.SH</tspan>
+	</text>
+	<text fill="white">
+		<tspan x="46" y="24">SYNTAX</tspan>
+	</text>
+
+	<text fill="darkgray">
+		<tspan x="8" y="51">.\&quot;</tspan>
+	</text>
+	<text fill="darkgray">
+		<tspan x="46" y="51">FOR</tspan>
+	</text>
+
+	<text fill="orange">
+		<tspan x="8" y="78">.B</tspan>
+	</text>
+	<text fill="white">
+		<tspan x="46" y="78">MAN</tspan>
+		<tspan x="46" y="97">PAGES</tspan>
+		<tspan x="46" y="116">(1)</tspan>
+	</text>
+
+</svg>

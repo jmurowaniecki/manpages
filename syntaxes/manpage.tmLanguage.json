@@ -14,23 +14,23 @@
 			"patterns": [
 				{
 					"name": "markup.heading",
-					"match": "\\.[A-Z]*"
+					"match": "^\\.[a-zA-Z]+"
 				},
 				{
 					"name": "markup.bold",
-					"match": "\\.[A-Z]* (.*)"
+					"match": "^\\.[a-zA-Z]+ (.*)"
 				},
 				{
 					"name": "markup.underline",
-					"match": "\\.(B|IR).*"
+					"match": "^\\.([Bb]|[Ii][Rr]).*"
 				},
 				{
 					"name": "markup.underline",
-					"match": "\\b\\.BR (.*)\\b"
+					"match": "\\b\\.[Bb][Rr] (.*)\\b"
 				},
 				{
 					"name": "comment.line",
-					"match": "\\.\\\\\" (.*)"
+					"match": "^\\.\\\\\"( .*)?$"
 				},
 				{
 					"name": "markup.bold",
@@ -38,13 +38,13 @@
 					"patterns": [
 						{
 							"name": "variable.parameter",
-							"match": "([\\-]+[a-zA-Z_]*)"
+							"match": "([\\-]+[a-zA-Z_]+)"
 						}
 					]
 				},
 				{
 					"name": "variable.parameter",
-					"match": "([\\-]+[a-zA-Z_]*)"
+					"match": "([\\-]+[a-zA-Z_]+)"
 				}
 			]
 		},
@@ -56,16 +56,14 @@
 				},
 				{
 					"name": "string.quoted.single",
-					"begin": "'",
-					"end": "'"
+					"match": "'[^']*'"
 				},
 				{
 					"name": "string.quoted.double",
-					"begin": "\"",
-					"end": "\"",
-					"patterns": []
+					"match": "\"[^\"]*\""
 				},
 				{
+					"name": "string.quoted.double.custom",
 					"begin": "\\$?\"",
 					"beginCaptures": {
 						"0": {
@@ -78,11 +76,10 @@
 							"name": "punctuation.definition.string.end"
 						}
 					},
-					"name": "string.quoted.double.custom",
 					"patterns": [
 						{
-							"match": "\\\\[\\$`\"\\\\\\n]",
-							"name": "constant.character.escape"
+							"name": "constant.character.escape",
+							"match": "\\\\[\\$`\"\\\\\\n]"
 						}
 					]
 				}
