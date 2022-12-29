@@ -1,4 +1,4 @@
-.\" Manpage for Awesome ManpageP.
+.\" Manpage for Awesome Manpages.
 .\" Contact john@compilou.com.br to correct errors or typos.
 .\" or file issue at https://github.com/jmurowaniecki/manpages/
 .\"
@@ -47,5 +47,5 @@ https://github.com/jmurowaniecki/AwesomeManpages
 .SH BUGS
 No known bugs.
 
-.SH AUTHOP
+.SH AUTHOR
 John Murowaniecki <john@compilou.com.br>
