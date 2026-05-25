@@ -1,16 +1,32 @@
+// SYNTAX TEST "source.man"
+
 .\" Manpage for Awesome Manpages.
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.roff
+
 .\" Contact jmurowaniecki@gmail.com to correct errors or typos.
-.\" or file issue at https://github.com/jmurowaniecki/manpages/
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.roff
+.\" or file issue at https://github.com
 .\"
 .\" (some comment between empty commented lines)
 .\"
-.TH MAN 8 "2026-06-26" "1.1" "Awesome Manpages man page"
+
+.TH man 8 "2026-06-26" "1.1" "Awesome Manpages man page"
+//  ^^^ entity.name.title.man
+//      ^ constant.numeric.section.man
+//         ^^^^^^^^^^ string.quoted.double.date.man
+//                      ^^^ string.quoted.double.source.man
+//                            ^^^^^^^^^^^^^^^^^^^^^^^^^ string.quoted.double.manual.man
+
 .SH NAME
+//  ^^^^ markup.heading.man
 Awesome Manpages - provide man pages syntax subset for VSCode.
 
 .SH SYNOPSIS
 awesome_command
 .B  [command]
+//  ^ punctuation.definition.bracket.begin.man
+//   ^^^^^^^ markup.bold.mandatory.man
+//          ^ punctuation.definition.bracket.end.man
 .B  <option|path or file>
 .B  {-R|--resize W,H}
 .B  {-C|--crop   W,H}
@@ -30,38 +46,31 @@ host argument. If no command is specified an interactive terminal will be opened
 
 .SH OPTIONS
 
-.TP
-.BR option
+.tP
+.Br option
 Option example
 
-.TP
-.BR -R ", " --resize =W,H
+.tP
+.Br -R ", " --resize =W,H
+//  ^^ variable.parameter.flag.man
+//          ^^^^^^^^ variable.parameter.flag.man
 Resize image to the given resolution.
 Default is 150,200.
 
-.TP
-.BR -C ", " --crop =W,H
+.tP
+.Br -C ", " --crop =W,H
 Crop image to the given resolution.
 Default is 150,200.
 
-.TP
+.tP
 .B  {-v|-vv|-vvv|--verbose N}
 Change verbosity level.
 -v    1     Slightly verbose
-            - Displays debugging information for important processes.
 -vv   2     So, it's verbose enough
-            - Displays debugging information for important processes along
-            with their inputs and outputs.
 -vvv  3     Verbose as hell
-            - Ensures the display of traces, execution comments, key points
-            of understanding, possibly comments on the parameters sent and
-            results obtained.
 -vvvv 4     Excessively verbose
-            - Don't worry, you won't need that - however, if you do, it might
-            be more interesting to acquire the source code and set up
-            breakpoints for step-by-step execution.
-.TP
-.BR <more…>
+.tP
+.Br <more…>
 Processed result image.
 Default is `processed.png`.
 

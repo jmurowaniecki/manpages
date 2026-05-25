@@ -1,90 +1,146 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Manpage",
+	"scopeName": "source.man",
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
+		{ "include": "#comments" },
+		{ "include": "#keywords" },
+		{ "include": "#flags" },
+		{ "include": "#strings" }
 	],
 	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.roff",
+					"match": "^\\.\\\\\\\".*$"
+				}
+			]
+		},
 		"keywords": {
 			"patterns": [
 				{
-					"name": "markup.heading",
-					"match": "^\\.[a-zA-Z]+"
+					"comment": "Cabeçalho principal .TH detalhado.",
+					"match": "^(\\.TH)\\s+([A-Za-z0-9_.-]+)\\s+([1-9])(?:\\s+(?:\"([^\"]*)\"|([^\\s\"]*)))(?:\\s+(?:\"([^\"]*)\"|([^\\s\"]*)))?(?:\\s+(?:\"([^\"]*)\"|([^\\s\"]*)))?",
+					"name": "meta.preprocessor.th.man",
+					"captures": {
+						"1": { "name": "keyword.control.macro.th.man" },
+						"2": { "name": "entity.name.title.man" },
+						"3": { "name": "constant.numeric.section.man" },
+						"4": { "name": "string.quoted.double.date.man" },
+						"5": { "name": "constant.other.date.man" },
+						"6": { "name": "string.quoted.double.source.man" },
+						"7": { "name": "entity.name.provider.man" },
+						"8": { "name": "string.quoted.double.manual.man" },
+						"9": { "name": "meta.documentation.manual.man" }
+					}
 				},
 				{
-					"name": "markup.bold",
-					"match": "^\\.[a-zA-Z]+ (.*)"
+					"comment": "Cabeçalhos principais como .TH e .SH",
+					"match": "^\\.([T|S]H)\\s+(.*)$",
+					"captures": {
+						"1": { "name": "keyword.control.header.man" },
+						"2": { "name": "markup.heading.man" }
+					}
 				},
 				{
-					"name": "markup.underline",
-					"match": "^\\.([Bb]|[Ii][Rr]).*"
-				},
-				{
-					"name": "markup.underline",
-					"match": "\\b\\.[Bb][Rr] (.*)\\b"
-				},
-				{
-					"name": "comment.line",
-					"match": "^\\.\\\\\"( .*)?$"
-				},
-				{
-					"name": "markup.bold",
-					"match": "<(.*)>",
+					"comment": "Macros de formatação (.BR, .TP, .I, …) processando argumentos complexos",
+					"begin": "^\\.([B|R|I|T|P]{1,2})\\s+",
+					"beginCaptures": {
+						"1": { "name": "keyword.control.macro.man" }
+					},
+					"end": "$",
 					"patterns": [
-						{
-							"name": "variable.parameter",
-							"match": "([\\-]+[a-zA-Z_]+)"
-						}
+						{ "include": "#syntax-arguments" },
+						{ "include": "#strings" }
 					]
 				},
 				{
-					"name": "variable.parameter",
-					"match": "([\\-]+[a-zA-Z_]+)"
+					"comment": "Macros genéricas que começam com ponto",
+					"match": "^\\.([A-Z]+)",
+					"captures": {
+						"1": { "name": "keyword.control.macro.man" }
+					}
+				}
+			]
+		},
+		"flags": {
+			"patterns": [
+				{
+					"comment": "Flags curtas ou longas em qualquer lugar do texto (ex: -v, --verbose, -R)",
+					"match": "(?<=^|\\s|\\(|\\[|\\{|\\|)(-{1,2}[a-zA-Z0-9_-]+)\\b",
+					"name": "variable.parameter.flag.man"
+				}
+			]
+		},
+		"syntax-arguments": {
+			"patterns": [
+				{
+					"comment": "[Obrigatórios] - Itens estruturados entre colchetes",
+					"begin": "\\[",
+					"beginCaptures": { "0": { "name": "punctuation.definition.bracket.begin.man" } },
+					"end": "\\]",
+					"endCaptures": { "0": { "name": "punctuation.definition.bracket.end.man" } },
+					"name": "markup.bold.mandatory.man",
+					"patterns": [
+						{ "include": "#flags" },
+						{ "include": "#syntax-arguments" }
+					]
+				},
+				{
+					"comment": "<Opcionais> - Itens estruturados entre chevrones",
+					"begin": "<",
+					"beginCaptures": { "0": { "name": "punctuation.definition.chevron.begin.man" } },
+					"end": ">",
+					"endCaptures": { "0": { "name": "punctuation.definition.chevron.end.man" } },
+					"name": "markup.italic.optional.man",
+					"patterns": [
+						{ "match": "\\|", "name": "keyword.operator.logical.man" },
+						{ "include": "#flags" },
+						{ "include": "#syntax-arguments" }
+					]
+				},
+				{
+					"comment": "{Alternativas} - Opções estruturadas entre chaves",
+					"begin": "\\{",
+					"beginCaptures": { "0": { "name": "punctuation.definition.brace.begin.man" } },
+					"end": "\\}",
+					"endCaptures": { "0": { "name": "punctuation.definition.brace.end.man" } },
+					"patterns": [
+						{ "match": "\\|", "name": "keyword.operator.logical.man" },
+						{ "include": "#flags" },
+						{ "include": "#syntax-arguments" }
+					]
+				},
+				{
+					"include": "#flags"
+				},
+				{
+					"comment": "Valores/Variáveis em caixa alta após uma flag (ex: W,H ou N)",
+					"match": "\\b([A-Z][A-Z0-9]*,?[A-Z0-9]*)\\b",
+					"name": "variable.other.value.man"
+				},
+				{
+					"comment": "Operador de pipe fora de blocos",
+					"match": "\\|",
+					"name": "keyword.operator.logical.man"
 				}
 			]
 		},
 		"strings": {
 			"patterns": [
 				{
-					"name": "constant.character.escape",
+					"name": "constant.character.escape.man",
 					"match": "\\\\."
 				},
 				{
-					"name": "string.quoted.single",
-					"match": "'[^']*'"
-				},
-				{
-					"name": "string.quoted.double",
-					"match": "\"[^\"]*\""
-				},
-				{
-					"name": "string.quoted.double.custom",
-					"begin": "\\$?\"",
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.definition.string.begin"
-						}
-					},
+					"name": "string.quoted.double.man",
+					"begin": "\"",
 					"end": "\"",
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.definition.string.end"
-						}
-					},
 					"patterns": [
-						{
-							"name": "constant.character.escape",
-							"match": "\\\\[\\$`\"\\\\\\n]"
-						}
+						{ "name": "constant.character.escape.man", "match": "\\\\." }
 					]
 				}
 			]
 		}
-	},
-	"scopeName": "source.man"
+	}
 }

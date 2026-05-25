@@ -8,7 +8,7 @@
     "author": {
         "name": "John Murowaniecki",
         "email": "jmurowaniecki@gmail.com",
-        "url": "https://compilou.com.br"
+        "url": "https://github.com/jmurowaniecki"
     },
     "maintainers": [
         "John Murowaniecki <jmurowaniecki@gmail.com>"
@@ -35,7 +35,8 @@
     "scripts": {
         "publish:extension": "vsce publish patch",
         "publish:repository": "git push origin main",
-        "publish": "npm run publish:extension && npm run publish:repository"
+        "publish": "npm run publish:extension && npm run publish:repository",
+        "test-syntax": "vscode-tmgrammar-test -g ./syntaxes/manpage.tmLanguage.json \"./test/syntax/**/*.test\""
     },
     "contributes": {
         "languages": [
@@ -68,5 +69,8 @@
                 "path": "./syntaxes/manpage.tmLanguage.json"
             }
         ]
+    },
+    "devDependencies": {
+        "vscode-tmgrammar-test": "^0.1.3"
     }
 }
