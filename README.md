@@ -13,28 +13,16 @@ Clone directly the extension to your VSCode extension path as suggested:
 git clone git@github.com:jmurowaniecki/manpages.git ~/.vscode/extensions/
 ```
 
-
 ## Contribute
 
 Contributions welcome! To set up development:
 
 1. Fork the repository and clone your fork.
-2. Install dependencies:
-
-```sh
-npm install
-```
-
-3. Run the syntax tests:
-
-```sh
-npm run test-syntax
-```
-
+2. Install dependencies: `npm install`
+3. Run the syntax tests: `npm run test-syntax`
 4. Make your changes on a feature branch, commit, and open a pull request.
 
 Thanks! If unsure, open an issue to discuss changes.
-
 
 ---
 
