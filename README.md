@@ -34,13 +34,13 @@ Thanks! If unsure, open an issue to discuss changes.
 > **Wanna see more information about how to create your own man pages?**
 >
 > Take a look at these links and then let me know if you need any help (;
-> - https://www.cyberciti.biz/faq/linux-unix-creating-a-manpage/
-> - https://www.linuxhowtos.org/System/creatingman.htm
-> - https://www.golinuxcloud.com/create-man-page-template-linux-with-examples/
-> - https://ubuntu-mate.community/t/how-to-create-your-own-man-pages/7931
+>
+> - [How To – Linux / UNIX Create a Manpage](https://www.cyberciti.biz/faq/linux-unix-creating-a-manpage/);
+> - [Creating Your Own MAN Page Version 1.0](https://www.linuxhowtos.org/System/creatingman.htm);
+> - [Create man page in Linux with examples (sample man page template)](https://www.golinuxcloud.com/create-man-page-template-linux-with-examples/);
+> - [How to create your own man pages](https://ubuntu-mate.community/t/how-to-create-your-own-man-pages/7931).
 >
 
 ---
 
-This work is licensed under a
-[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
