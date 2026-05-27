@@ -1,0 +1,150 @@
+.\" Manpage for Awesome Manpages.
+.\" Contact jmurowaniecki@gmail.com to report issues.
+.\" Project repository:
+.\" https://github.com/jmurowaniecki/manpages
+.
+.\" Comments between blank comment lines should also be parsed.
+.
+.\" Your VSCode extension for Man Pages syntax highlighting and parsing brings
+.\" a cleaner and more accessible writing experience to one of the oldest
+.\" documentation formats in the Unix ecosystem. Designed for developers who
+.\" still enjoy the elegance of man pages without wrestling directly with raw
+.\" roff syntax, the extension provides lightweight syntax support, improved
+.\" readability, and a practical development workflow inside VSCode.
+.
+.\" The project focuses on simplicity, portability, and compatibility with
+.\" traditional man page tooling, making it easier to create, maintain, and
+.\" test standardized documentation while preserving the spirit of classic
+.\" terminal manuals. A tiny bridge between vintage Unix arcana and modern
+.\" editor ergonomics.
+.
+.TH AWESOME-MANPAGES 8 "2026-06-26" "1.1" "Awesome Manpages"
+
+.SH NAME
+awesome-manpages \- subset of man page syntax for VSCode.
+
+.SH SYNOPSIS
+.B awesome_command
+.RI [ command ]
+.I <option|path_or_file>
+
+.BR "{ " "-R" " | " "--resize"
+.IR W , H
+.BR " }"
+
+.BR "{ " "-C" " | " "--crop"
+.IR W , H
+.BR " }"
+
+.BR "{ " "-v" " | " "-vv" " | " "-vvv" " | " "--verbose"
+.IR N
+.BR " }"
+
+.RI [ <more|options|...> ]
+
+.SH DESCRIPTION
+.B Awesome Manpages
+was created to simplify the development of standardized and portable manual
+pages directly inside VSCode.
+
+.PP
+The project focuses on supporting a practical subset of traditional roff
+syntax while preserving compatibility with common man page tools.
+
+.PP
+.B command
+Represents a command executed on a remote host. The command starts at the
+first non-option argument after the host declaration. If no command is
+specified, an interactive terminal session is opened.
+
+.SH OPTIONS
+.TP
+.I command
+Command to execute on the remote host.
+
+.TP
+.BR "-R" ", " "--resize" =\fIW,H\fR
+Resize the image to the specified resolution.
+Default value is 150x200.
+
+.TP
+.BR "-C" ", " "--crop" =\fIW,H\fR
+Crop the image using the specified resolution.
+Default value is 150x200.
+
+.TP
+.BR "-v" ", " "-vv" ", " "-vvv" ", " "--verbose" " " \fIN\fR
+Change verbosity level.
+
+.RS
+.IP "\fB-v\fR    (1)" 8
+Displays minimal debugging information.
+
+.IP "\fB-vv\fR   (2)" 8
+Displays debugging information with command inputs and outputs.
+
+.IP "\fB-vvv\fR  (3)" 8
+Displays execution traces, comments, and important runtime details.
+
+.IP "\fB-vvvv\fR (4)" 8
+Extremely verbose output intended mainly for development, and for all those
+who have lost any trace of sanity, given up on happiness, and embraced the
+dark side of existence.
+.RE
+
+.TP
+.RI < more... >
+Defines the output image.
+Default is \fIprocessed.png\fR.
+
+.SH FILES
+.I ~/.config/awesome-manpages/config
+Main configuration file.
+
+.TP
+.I ~/.cache/awesome-manpages/
+Temporary cache directory.
+
+.SH EXIT STATUS
+.TP
+.B 0
+Successful execution.
+
+.TP
+.B 1
+Generic execution failure.
+
+.TP
+.B 2
+Invalid command line arguments.
+
+.SH EXAMPLES
+.TP
+Resize an image:
+.B awesome_command --resize 1920,1080 image.png
+
+.TP
+Crop an image:
+.B awesome_command --crop 800,600 image.png
+
+.TP
+Enable maximum verbosity:
+.B awesome_command -vvvv image.png
+
+.SH SEE ALSO
+.UR https://github.com/jmurowaniecki/manpages
+GitHub Repository
+.UE
+
+.PP
+.UR https://marketplace.visualstudio.com/items?itemName=CompilouIT.manpage
+VSCode Marketplace Extension
+.UE
+
+.SH BUGS
+No known bugs.
+
+.SH AUTHOR
+John Murowaniecki
+.MT jmurowaniecki@gmail.com
+.ME

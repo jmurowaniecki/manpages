@@ -13,9 +13,9 @@
 .TH man 8 "2026-06-26" "1.1" "Awesome Manpages man page"
 //  ^^^ entity.name.title.man
 //      ^ constant.numeric.section.man
-//         ^^^^^^^^^^ string.quoted.double.date.man
-//                      ^^^ string.quoted.double.source.man
-//                            ^^^^^^^^^^^^^^^^^^^^^^^^^ string.quoted.double.manual.man
+//         ^^^^^^^^^^ string.unquoted.date.man
+//                      ^^^ entity.name.provider.man
+//                            ^^^^^^^^^^^^^^^^^^^^^^^^^ meta.documentation.manual.man
 
 .SH NAME
 //  ^^^^ markup.heading.man
@@ -24,9 +24,8 @@ Awesome Manpages - provide man pages syntax subset for VSCode.
 .SH SYNOPSIS
 awesome_command
 .B  [command]
-//  ^ punctuation.definition.bracket.begin.man
-//   ^^^^^^^ markup.bold.mandatory.man
-//          ^ punctuation.definition.bracket.end.man
+//   ^^^^^^^ markup.formated.man
+
 .B  <option|path or file>
 .B  {-R|--resize W,H}
 .B  {-C|--crop   W,H}
