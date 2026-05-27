@@ -6,71 +6,81 @@
 .\"
 .TH MAN 8 "2026-06-26" "1.1" "Awesome Manpages man page"
 .SH NAME
-Awesome Manpages - provide man pages syntax subset for VSCode.
+Awesome Manpages \- fornece um subconjunto de sintaxe de man pages para o VSCode.
 
 .SH SYNOPSIS
-awesome_command
-.B  [command]
-.B  <option|path or file>
-.B  {-R|--resize W,H}
-.B  {-C|--crop   W,H}
-.B  {-v|-vv|-vvv|--verbose N}
-.ir <more|options|…>
+.B awesome_command
+.RI [ command ]
+.I <option|path_or_file>
+.B { \-R | \-\-resize
+.IR W , H }
+.B { \-C | \-\-crop
+.IR W , H }
+.B { \-v | \-vv | \-vvv | \-\-verbose
+.IR N }
+.RI [ <more|options|...> ]
 
 .SH DESCRIPTION
 .B Awesome Manpages
-was built in order to facilitate the development journey of useful and properly
-standardized documentation using the well known - and widely available - man page tool.
+was built in order to facilitate the development journey of useful and
+properly standardized documentation using the well known \- and widely
+available \- man page tool.
 
+.PP
 .B command
-A command to run on the remote host. This will normally be run by the remote host
-using the user's shell. The command begins at the first hyphen argument after the 
-host argument. If no command is specified an interactive terminal will be opened
-(see -t and -T).
+A command to run on the remote host. This will normally be run by the remote
+host using the user's shell. The command begins at the first hyphen argument
+after the host argument. If no command is specified an interactive terminal
+will be opened (see \fB\-t\fR and \fB\-T\fR).
 
 .SH OPTIONS
+.TP
+.I command
+A command to run on the remote host.
 
 .TP
-.BR option
-Option example
-
-.TP
-.BR -R ", " --resize =W,H
+.BR \-R ", " \-\-resize =\fIW,H\fR
 Resize image to the given resolution.
 Default is 150,200.
 
 .TP
-.BR -C ", " --crop =W,H
+.BR \-C ", " \-\-crop =\fIW,H\fR
 Crop image to the given resolution.
 Default is 150,200.
 
 .TP
-.B  {-v|-vv|-vvv|--verbose N}
+.BR \-v ", " \-vv ", " \-vvv ", " \-\-verbose " " \fIN\fR
 Change verbosity level.
--v    1     Slightly verbose
-            - Displays debugging information for important processes.
--vv   2     So, it's verbose enough
-            - Displays debugging information for important processes along
-            with their inputs and outputs.
--vvv  3     Verbose as hell
-            - Ensures the display of traces, execution comments, key points
-            of understanding, possibly comments on the parameters sent and
-            results obtained.
--vvvv 4     Excessively verbose
-            - Don't worry, you won't need that - however, if you do, it might
-            be more interesting to acquire the source code and set up
-            breakpoints for step-by-step execution.
-.TP
-.BR <more…>
-Processed result image.
-Default is `processed.png`.
+.RS
+.IP "\fB\-v\fR (1)" 8
+Slightly verbose. Displays debugging information for important processes.
+.IP "\fB\-vv\fR (2)" 8
+So, it's verbose enough. Displays debugging information along with inputs and outputs.
+.IP "\fB\-vvv\fR (3)" 8
+Verbose as hell. Ensures the display of traces, execution comments, and key points.
+.IP "\fB\-vvvv\fR (4)" 8
+Excessively verbose. You won't need that. Better to acquire the source code and use breakpoints.
+.RE
 
+.TP
+.RI < more... >
+Processed result image.
+Default is \fIprocessed.png\fR.
 
 .SH SEE ALSO
-https://github.com/jmurowaniecki/AwesomeManpages
+.UR https://github.com/jmurowaniecki/manpages
+GitHub Repository
+.UE
+
+.PP
+.UR https://marketplace.visualstudio.com/items?itemName=CompilouIT.manpage
+VSCode Marketplace Extension
+.UE
 
 .SH BUGS
 No known bugs.
 
 .SH AUTHOR
-John Murowaniecki <jmurowaniecki@gmail.com>
+John Murowaniecki
+.MT jmurowaniecki@gmail.com
+.ME
