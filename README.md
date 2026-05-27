@@ -6,14 +6,19 @@
 
 **Yeah!** This is a super simple Man Pages syntax extension. Fell free to use and contribute!
 
-# Getting started
+## Getting started
+
+Launch VS Code Quick Open (Ctrl+P), paste the following command then press enter.
+```sh
+ext install CompilouIT.manpage
+```
+
+## Contribute
 
 Clone directly the extension to your VSCode extension path as suggested:
 ```sh
 git clone git@github.com:jmurowaniecki/manpages.git ~/.vscode/extensions/
 ```
-
-## Contribute
 
 Contributions welcome! To set up development:
 
