@@ -5,7 +5,11 @@ on:
     branches: [main]
 
 jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+
   publish:
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
@@ -17,6 +21,11 @@ jobs:
           cache: 'npm'
 
       - run: npm ci
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "John Murowaniecki"
+          git config --global user.email "jmurowaniecki@gmail.com"
 
       - name: Publish to VSCE
         run: npm run publish

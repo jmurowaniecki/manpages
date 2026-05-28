@@ -1,9 +1,11 @@
 name: Test
 
 on:
-  push:
+  workflow_call:
   pull_request:
-    branches: [main, develop]
+  push:
+    branches:
+      - main
 
 jobs:
   test:
