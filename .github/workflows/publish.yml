@@ -28,6 +28,6 @@ jobs:
           git config --global user.email "jmurowaniecki@gmail.com"
 
       - name: Publish to VSCE
-        run: npm run publish:dry
+        run: npm run publish:only
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}

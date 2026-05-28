@@ -35,7 +35,7 @@
     "scripts": {
         "publish:extension": "vsce publish patch",
         "publish:repository": "git push origin main",
-        "publish:dry": "vsce publish",
+        "publish:only": "vsce publish",
         "publish": "npm run publish:extension && npm run publish:repository",
         "test": "vscode-tmgrammar-test -g ./syntaxes/manpage.tmLanguage.json \"./test/syntax/**/*.man\""
     },
