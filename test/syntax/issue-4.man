@@ -1,0 +1,122 @@
+// SYNTAX TEST "source.man"
+
+// ===== RULE 1: COMMENTS (.\" pattern) =====
+.\" This is a comment line
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.roff
+
+.\" Another comment with special chars @#$%
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.roff
+
+.\" Comment with numbers 12345
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.roff
+
+
+// ===== RULE 2: MAIN HEADERS (.TH and .SH) =====
+.TH mycommand 8 "January 2024" "1.0.0" "My Command Manual"
+//  ^^^^^^^^^ entity.name.title.man
+//                                      ^^^^^^^^^^^^^^^^^ source.man meta.preprocessor.th.man
+
+.SH NAME
+//  ^^^^ markup.heading.man
+
+.SH SYNOPSIS
+//  ^^^^^^^^ markup.heading.man
+
+.SH DESCRIPTION
+//  ^^^^^^^^^^^ markup.heading.man
+
+
+// ===== RULE 3: FORMAT MACROS (.B, .I, .R, .BR, .IR, .RI, .RB) =====
+.B bold text
+// ^ markup.formated.man
+.I italic text
+// ^ markup.formated.man
+.R roman text
+// ^ markup.formated.man
+.BR bold-roman combination
+//  ^ markup.formated.man
+.IR italic-roman combination
+//  ^ markup.formated.man
+.RI roman-italic combination
+//  ^ markup.formated.man
+.RB roman-bold combination
+//  ^ markup.formated.man
+
+
+// ===== RULE 4: GENERIC MACROS (.tP, .Br, .ir, etc.) =====
+.tP
+//^ source.man
+.Br
+//^ source.man
+.PP
+//^ source.man
+.TP
+//^ source.man
+
+
+// ===== RULE 5: MANDATORY ARGUMENTS [arg] =====
+.B [command]
+// ^ source.man
+//  ^^^^^^^ markup.formated.man
+//         ^ source.man
+
+.B [source] [destination]
+// ^ source.man
+//  ^^^^^^ markup.formated.man
+//        ^ source.man
+//          ^ source.man
+//           ^^^^^^^^^^^ markup.formated.man
+//                      ^ source.man
+
+
+// ===== RULE 6: OPTIONAL ARGUMENTS <arg> =====
+.B <option>
+// ^ source.man
+//  ^^^^^^ markup.formated.man
+//        ^ source.man
+
+.B <file|directory|path>
+// ^ source.man
+//  ^^^^^^^^^^^^^^^^^^^ markup.formated.man
+//                     ^ source.man
+
+
+// ===== RULE 7: ALTERNATIVES {arg1|arg2|arg3} =====
+.B {-v|-vv|-vvv}
+// ^ source.man
+//  ^^^^^^^^^^^ markup.formated.man
+//             ^ source.man
+
+.B {yes|no|maybe}
+// ^ source.man
+//  ^^^^^^^^^^^^^ markup.formated.man
+//              ^ source.man
+
+
+// ===== RULE 8: ESCAPE SEQUENCES (\\.) =====
+Text with escape \\n for newline.
+//               ^ constant.character.escape.man
+
+Tab character \\t example.
+//            ^ constant.character.escape.man
+
+Backslash escape \\\\ in output.
+//                  ^ constant.character.escape.man
+
+Special chars \\$ \\@ \\# \\% work.
+//            ^ constant.character.escape.man
+//                ^ constant.character.escape.man
+//                    ^ constant.character.escape.man
+//                        ^ constant.character.escape.man
+
+
+// ===== RULE 9: QUOTED STRINGS ("...") =====
+Name: "John Doe"
+//     ^^^^^^^^^^^ string.quoted.double.man
+
+Message: "This is a quoted string with spaces"
+//       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ string.quoted.double.man
+
+Escaped quotes: "String with \\" quote inside"
+//              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ string.quoted.double.man
+//                            ^ constant.character.escape.man
