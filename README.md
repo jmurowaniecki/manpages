@@ -13,6 +13,8 @@ Launch VS Code Quick Open (Ctrl+P), paste the following command then press enter
 ext install CompilouIT.manpage
 ```
 
+Check the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=CompilouIT.manpage) for more details.
+
 ## Contribute
 
 Clone directly the extension to your VSCode extension path as suggested:
@@ -24,7 +26,7 @@ Contributions welcome! To set up development:
 
 1. Fork the repository and clone your fork.
 2. Install dependencies: `npm install`
-3. Run the syntax tests: `npm run test-syntax`
+3. Run the syntax tests: `npm run test`
 4. Make your changes on a feature branch, commit, and open a pull request.
 
 Thanks! If unsure, open an issue to discuss changes.
