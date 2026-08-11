@@ -1,0 +1,29 @@
+name: Bug report
+description: Report incorrect highlighting or extension behavior
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Security issues: do **not** use this form — see [SECURITY.md](https://github.com/jmurowaniecki/manpages/blob/main/SECURITY.md).
+  - type: textarea
+    id: description
+    attributes:
+      label: What went wrong?
+      description: Expected vs actual highlighting or behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Minimal `.man` sample
+      description: Smallest snippet that reproduces the issue (fenced as text).
+      render: text
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Extension / VS Code version
+    validations:
+      required: false

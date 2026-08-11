@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Silver-oriented governance: Code of Conduct, GOVERNANCE, DCO, roadmap, architecture, assurance case, security review.
+- Quick start and signed-release verification docs.
+- Issue/PR templates; SPDX/copyright notices on primary source files.
 - Static analysis script and CI steps (`npm run analyze`, `npm run audit`).
 - External interface documentation in `docs/INTERFACE.md`.
 - Dependabot for npm and GitHub Actions.
@@ -18,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Relicensed the project from CC-BY-NC-SA-4.0 to MIT.
 - Expanded README (install, secure use, contribution and security links).
+- Formal test-and-review policy in CONTRIBUTING.
 
 ## [0.1.3] - 2026-05-27
 

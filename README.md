@@ -6,6 +6,10 @@
 
 **manpage** adds syntax highlighting for Unix/Linux manual pages (roff/man macros) in Visual Studio Code. It helps you read and edit `.man`, `.manpage`, and section files (`.1`–`.8`) with clearer structure for titles, headings, macros, and comments.
 
+## Quick start
+
+See [docs/QUICKSTART.md](docs/QUICKSTART.md) for a one-minute install-and-try path.
+
 ## Install
 
 **From the Marketplace**
@@ -40,6 +44,23 @@ File associations, language configuration, and TextMate scopes are documented in
 - **Bugs and enhancements:** [GitHub Issues](https://github.com/jmurowaniecki/manpages/issues)
 - **Pull requests:** see [CONTRIBUTING.md](CONTRIBUTING.md)
 - **Security reports:** see [SECURITY.md](SECURITY.md)
+- **Code of Conduct:** [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- **Governance:** [GOVERNANCE.md](GOVERNANCE.md)
+
+## Documentation
+
+| Doc | Purpose |
+|-----|---------|
+| [docs/QUICKSTART.md](docs/QUICKSTART.md) | Fast path for new users |
+| [docs/INTERFACE.md](docs/INTERFACE.md) | External interface (extensions, scopes) |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | High-level design |
+| [docs/ROADMAP.md](docs/ROADMAP.md) | Plans for the next year |
+| [docs/ASSURANCE-CASE.md](docs/ASSURANCE-CASE.md) | Security requirements and threat model |
+| [docs/SIGNED-RELEASES.md](docs/SIGNED-RELEASES.md) | How to verify releases |
+
+## Achievements
+
+- [OpenSSF Best Practices](https://www.bestpractices.dev/projects/10384) (badge above; update status on the site as criteria are met)
 
 ## Secure use
 

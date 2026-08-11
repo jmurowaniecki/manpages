@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// Copyright (c) the manpages contributors.
+// SPDX-License-Identifier: MIT
 /**
  * Static checks for grammar JSON and package metadata.
  * Fails on invalid JSON or missing required extension fields.

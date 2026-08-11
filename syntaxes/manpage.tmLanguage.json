@@ -1,4 +1,6 @@
 {
+	"copyrightNotice": "Copyright (c) the manpages contributors.",
+	"spdxLicense": "SPDX-License-Identifier: MIT",
 	"name": "Manpage",
 	"scopeName": "source.man",
 	"patterns": [
