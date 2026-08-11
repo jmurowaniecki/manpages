@@ -76,6 +76,6 @@
     },
     "devDependencies": {
         "vscode-tmgrammar-test": "0.1.3",
-        "@vscode/vsce": "3.9.1"
+        "@vscode/vsce": "3.9.2"
     }
 }
