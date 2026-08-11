@@ -4,6 +4,7 @@
     "description": "Syntax highlight for system reference manuals",
     "homepage": "https://github.com/jmurowaniecki/manpages",
     "version": "0.1.3",
+    "license": "MIT",
     "publisher": "compilouit",
     "author": {
         "name": "John Murowaniecki",

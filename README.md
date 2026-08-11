@@ -1,10 +1,10 @@
 # VSCode Manpages Syntax Extension
 
-[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
-
 ![screenshot using Monokai dimmed](assets/screenshot.png)
 
 **Yeah!** This is a super simple Man Pages syntax extension. Fell free to use and contribute!
+
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/10384/badge)](https://www.bestpractices.dev/projects/10384)
 
 ## Getting started
 
@@ -45,4 +45,4 @@ Thanks! If unsure, open an issue to discuss changes.
 
 ---
 
-This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+Licensed under the [MIT License](LICENSE).
