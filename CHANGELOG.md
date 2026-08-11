@@ -7,10 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Static analysis script and CI steps (`npm run analyze`, `npm run audit`).
+- External interface documentation in `docs/INTERFACE.md`.
+- Dependabot for npm and GitHub Actions.
+- CONTRIBUTING, SECURITY, and CHANGELOG for Best Practices readiness.
+
 ### Changed
 
 - Relicensed the project from CC-BY-NC-SA-4.0 to MIT.
-- Expanded project documentation for OpenSSF Best Practices (README, CONTRIBUTING, SECURITY, Dependabot).
+- Expanded README (install, secure use, contribution and security links).
 
 ## [0.1.3] - 2026-05-27
 

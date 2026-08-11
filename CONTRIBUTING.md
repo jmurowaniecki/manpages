@@ -18,10 +18,26 @@ Pull requests are the preferred way to contribute. Issues are used for bugs and 
 git clone https://github.com/YOUR_USER/manpages.git
 cd manpages
 npm install
+npm run analyze
+npm run audit
 npm test
 ```
 
 To try the extension interactively, open this folder in VS Code and press `F5` (Extension Development Host).
+
+The external interface (file extensions and TextMate scopes) is described in [docs/INTERFACE.md](docs/INTERFACE.md). Update that document when you change associations or principal scopes.
+
+## Static analysis
+
+Before opening a pull request, run:
+
+```sh
+npm run analyze   # validate JSON / extension metadata
+npm run audit     # npm audit at high severity and above
+npm test
+```
+
+CI runs the same checks on every pull request and push to `main`.
 
 ## Tests
 

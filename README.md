@@ -33,6 +33,8 @@ Then open the folder in VS Code (`File` → `Open Folder`) and press `F5` to lau
 
 Open any man-page source file (for example `foo.1` or `bar.man`). VS Code should select the **manpage** language automatically from the file extension. You can also choose **manpage** from the language mode picker in the status bar.
 
+File associations, language configuration, and TextMate scopes are documented in [docs/INTERFACE.md](docs/INTERFACE.md).
+
 ## Feedback and contributions
 
 - **Bugs and enhancements:** [GitHub Issues](https://github.com/jmurowaniecki/manpages/issues)

@@ -38,6 +38,8 @@
         "publish:repository": "git push origin main",
         "publish:only": "vsce publish",
         "publish": "npm run publish:extension && npm run publish:repository",
+        "analyze": "node ./scripts/analyze.js",
+        "audit": "npm audit --audit-level=high",
         "test": "vscode-tmgrammar-test -g ./syntaxes/manpage.tmLanguage.json \"./test/syntax/**/*.man\""
     },
     "contributes": {
